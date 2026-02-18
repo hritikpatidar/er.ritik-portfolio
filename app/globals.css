@@ -1,4 +1,9 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark *));
+
+html {
+  scroll-behavior: smooth;
+}
 
 :root {
   --background: #ffffff;
