@@ -114,7 +114,7 @@ const Dashboard = () => {
                         className="text-xl font-bold text-blue-600 cursor-pointer"
                         onClick={() => setActiveTab("profile")}
                     >
-                        Admin Dashboard
+                        Admin
                     </h1>
 
                     {/* Desktop Menu */}
