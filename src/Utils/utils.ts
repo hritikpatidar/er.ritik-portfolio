@@ -1,5 +1,3 @@
-import toast from "react-hot-toast";
-import { addRecommendedProduct } from "../Services/userServices/categorySerives";
 
 export const errMsg = (response: any) => {
     if (typeof (response.data) === "object") {
@@ -18,12 +16,4 @@ export const formatPrice = (price: any) => {
     }).format(price);
 };
 
-
-export const handleAddRecommended = async (id:any) => {
-    try {
-        await addRecommendedProduct(id)
-    } catch (error) {
-        console.error("error", error)
-    }
-}
 
