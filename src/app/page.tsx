@@ -15,12 +15,12 @@ import {
 
 import { SiRedux, SiNextdotjs, SiTailwindcss } from "react-icons/si";
 
-import myPhoto from "./assets/my-photo.jpg";
-import logo from "./assets/logo.png";
+import myPhoto from "../assets/my-photo.jpg";
 import { VscClose, VscGrabber } from "react-icons/vsc";
 
 import Image from "next/image";
 import Themetoggle from "@/component/Themetoggle";
+import { useRouter } from "next/navigation";
 
 const fadeUp: Variants = {
   hidden: {
@@ -39,6 +39,7 @@ const fadeUp: Variants = {
 };
 
 function App() {
+  const router = useRouter();
   const [menuOpen, setMenuOpen] = useState(false);
   const [active, setActive] = useState("home");
 
@@ -190,7 +191,43 @@ function App() {
             </motion.div>
 
             <Themetoggle />
+            <motion.button
+              whileHover={{ x: -4 }}
+              whileTap={{ scale: 0.95 }}
+              onClick={() => router.push("/login")}
+              className="
+                flex items-center gap-2
+                px-4 py-2
+                rounded-full
+                bg-white/70 dark:bg-gray-900/70
+                backdrop-blur-md
+                border border-gray-200 dark:border-gray-700
+                shadow-md
+                cursor-pointer
+                text-gray-800 dark:text-gray-200
+                hover:text-blue-600
+                hover:border-blue-500/40
+                transition-all duration-300
+              "
+            >
+              {/* <motion.span
+                animate={{ x: [0, -3, 0] }}
+                transition={{ repeat: Infinity, duration: 1.5 }}
+              >
+                ←
+              </motion.span> */}
 
+              <span className="text-sm font-medium">
+                Login
+              </span>
+              <motion.span
+                className="text-lg"
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.2 }}
+              >
+                →
+              </motion.span>
+            </motion.button>
           </div>
         </div>
         {/* Mobile Menu */}
@@ -231,6 +268,7 @@ function App() {
                     {item.charAt(0).toUpperCase() + item.slice(1)}
                   </motion.div>
                 ))}
+                
               </motion.div>
             </>
           )}
