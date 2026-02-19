@@ -19,7 +19,7 @@ import myPhoto from "../assets/my-photo.jpg";
 import { VscClose, VscGrabber } from "react-icons/vsc";
 
 import Image from "next/image";
-import Themetoggle from "@/component/Themetoggle";
+import Themetoggle from "@/src/Component/Themetoggle";
 import { useRouter } from "next/navigation";
 
 const fadeUp: Variants = {

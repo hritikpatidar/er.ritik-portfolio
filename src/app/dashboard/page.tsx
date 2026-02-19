@@ -3,7 +3,7 @@
 import { useState } from "react";
 import { Variants, motion, AnimatePresence } from "framer-motion";
 import { FaBars, FaDatabase, FaDocker, FaGitAlt, FaNodeJs, FaReact } from "react-icons/fa";
-import Themetoggle from "@/component/Themetoggle";
+import Themetoggle from "@/src/Component/Themetoggle";
 import { useRouter } from "next/navigation";
 import { SiNextdotjs, SiRedux, SiTailwindcss } from "react-icons/si";
 
